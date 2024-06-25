@@ -1,8 +1,10 @@
-//
-//  AppState.swift
-//  BlockChainAssetTrader
-//
-//  Created by JONGHUN PARK on 6/24/24.
-//
-
 import Foundation
+import Combine
+
+class AppState: ObservableObject {
+    @Published var token: String = "" {
+        didSet {
+            print("Token updated: \(token)")
+        }
+    }
+}

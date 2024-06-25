@@ -7,18 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2E0E892C29936500DDB9FF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E0E882C29936500DDB9FF /* RegisterView.swift */; };
+		7D2E0E8B2C29937000DDB9FF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E0E8A2C29937000DDB9FF /* LoginView.swift */; };
+		7D2E0E8D2C29937D00DDB9FF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E0E8C2C29937D00DDB9FF /* TransactionView.swift */; };
+		7D2E0E8F2C29938700DDB9FF /* AssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E0E8E2C29938700DDB9FF /* AssetView.swift */; };
+		7D2E0E912C29944E00DDB9FF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E0E902C29944E00DDB9FF /* Common.swift */; };
+		7D2E0E932C299BFB00DDB9FF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E0E922C299BFB00DDB9FF /* AppState.swift */; };
+		7DA2A83B2C2B09D40016A95A /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2A83A2C2B09D40016A95A /* TransactionDetailView.swift */; };
+		7DA2A8412C2B14020016A95A /* BlockChainTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2A8402C2B14020016A95A /* BlockChainTransaction.swift */; };
+		7DA2A8432C2B151E0016A95A /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2A8422C2B151E0016A95A /* NavigationDestination.swift */; };
 		7DEC6D0D2C29295F0095514A /* BlockChainAssetTraderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6D0C2C29295F0095514A /* BlockChainAssetTraderApp.swift */; };
 		7DEC6D0F2C29295F0095514A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6D0E2C29295F0095514A /* ContentView.swift */; };
 		7DEC6D112C2929610095514A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEC6D102C2929610095514A /* Assets.xcassets */; };
 		7DEC6D142C2929610095514A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEC6D132C2929610095514A /* Preview Assets.xcassets */; };
+		7DEC6D1C2C292B8F0095514A /* web3-zksync.swift in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEC6D1B2C292B8F0095514A /* web3-zksync.swift */; };
+		7DEC6D1E2C292B8F0095514A /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEC6D1D2C292B8F0095514A /* web3.swift */; };
+		7DEC6D212C29547E0095514A /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6D202C29547E0095514A /* TransactionListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D2E0E882C29936500DDB9FF /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		7D2E0E8A2C29937000DDB9FF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7D2E0E8C2C29937D00DDB9FF /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		7D2E0E8E2C29938700DDB9FF /* AssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetView.swift; sourceTree = "<group>"; };
+		7D2E0E902C29944E00DDB9FF /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		7D2E0E922C299BFB00DDB9FF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7DA2A83A2C2B09D40016A95A /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		7DA2A8402C2B14020016A95A /* BlockChainTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainTransaction.swift; sourceTree = "<group>"; };
+		7DA2A8422C2B151E0016A95A /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
 		7DEC6D092C29295F0095514A /* BlockChainAssetTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockChainAssetTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEC6D0C2C29295F0095514A /* BlockChainAssetTraderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainAssetTraderApp.swift; sourceTree = "<group>"; };
 		7DEC6D0E2C29295F0095514A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7DEC6D102C2929610095514A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DEC6D132C2929610095514A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7DEC6D1F2C29374E0095514A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7DEC6D202C29547E0095514A /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DEC6D1E2C292B8F0095514A /* web3.swift in Frameworks */,
+				7DEC6D1C2C292B8F0095514A /* web3-zksync.swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +76,21 @@
 		7DEC6D0B2C29295F0095514A /* BlockChainAssetTrader */ = {
 			isa = PBXGroup;
 			children = (
+				7DEC6D1F2C29374E0095514A /* Info.plist */,
 				7DEC6D0C2C29295F0095514A /* BlockChainAssetTraderApp.swift */,
 				7DEC6D0E2C29295F0095514A /* ContentView.swift */,
 				7DEC6D102C2929610095514A /* Assets.xcassets */,
 				7DEC6D122C2929610095514A /* Preview Content */,
+				7DEC6D202C29547E0095514A /* TransactionListView.swift */,
+				7D2E0E882C29936500DDB9FF /* RegisterView.swift */,
+				7D2E0E8A2C29937000DDB9FF /* LoginView.swift */,
+				7D2E0E8C2C29937D00DDB9FF /* TransactionView.swift */,
+				7D2E0E8E2C29938700DDB9FF /* AssetView.swift */,
+				7D2E0E902C29944E00DDB9FF /* Common.swift */,
+				7D2E0E922C299BFB00DDB9FF /* AppState.swift */,
+				7DA2A83A2C2B09D40016A95A /* TransactionDetailView.swift */,
+				7DA2A8402C2B14020016A95A /* BlockChainTransaction.swift */,
+				7DA2A8422C2B151E0016A95A /* NavigationDestination.swift */,
 			);
 			path = BlockChainAssetTrader;
 			sourceTree = "<group>";
@@ -83,6 +119,10 @@
 			dependencies = (
 			);
 			name = BlockChainAssetTrader;
+			packageProductDependencies = (
+				7DEC6D1B2C292B8F0095514A /* web3-zksync.swift */,
+				7DEC6D1D2C292B8F0095514A /* web3.swift */,
+			);
 			productName = BlockChainAssetTrader;
 			productReference = 7DEC6D092C29295F0095514A /* BlockChainAssetTrader.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 7DEC6D002C29295F0095514A;
+			packageReferences = (
+				7DEC6D1A2C292B8F0095514A /* XCRemoteSwiftPackageReference "web3" */,
+			);
 			productRefGroup = 7DEC6D0A2C29295F0095514A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +180,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA2A8412C2B14020016A95A /* BlockChainTransaction.swift in Sources */,
+				7D2E0E912C29944E00DDB9FF /* Common.swift in Sources */,
 				7DEC6D0F2C29295F0095514A /* ContentView.swift in Sources */,
+				7D2E0E892C29936500DDB9FF /* RegisterView.swift in Sources */,
+				7DA2A8432C2B151E0016A95A /* NavigationDestination.swift in Sources */,
+				7D2E0E932C299BFB00DDB9FF /* AppState.swift in Sources */,
+				7D2E0E8F2C29938700DDB9FF /* AssetView.swift in Sources */,
 				7DEC6D0D2C29295F0095514A /* BlockChainAssetTraderApp.swift in Sources */,
+				7DA2A83B2C2B09D40016A95A /* TransactionDetailView.swift in Sources */,
+				7D2E0E8B2C29937000DDB9FF /* LoginView.swift in Sources */,
+				7DEC6D212C29547E0095514A /* TransactionListView.swift in Sources */,
+				7D2E0E8D2C29937D00DDB9FF /* TransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +328,8 @@
 				DEVELOPMENT_TEAM = 54THW6C299;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlockChainAssetTrader/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "\"This app requires access to the local network to communicate with the backend server.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +359,8 @@
 				DEVELOPMENT_TEAM = 54THW6C299;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlockChainAssetTrader/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "\"This app requires access to the local network to communicate with the backend server.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +401,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7DEC6D1A2C292B8F0095514A /* XCRemoteSwiftPackageReference "web3" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argentlabs/web3.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7DEC6D1B2C292B8F0095514A /* web3-zksync.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DEC6D1A2C292B8F0095514A /* XCRemoteSwiftPackageReference "web3" */;
+			productName = "web3-zksync.swift";
+		};
+		7DEC6D1D2C292B8F0095514A /* web3.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DEC6D1A2C292B8F0095514A /* XCRemoteSwiftPackageReference "web3" */;
+			productName = web3.swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7DEC6D012C29295F0095514A /* Project object */;
 }
