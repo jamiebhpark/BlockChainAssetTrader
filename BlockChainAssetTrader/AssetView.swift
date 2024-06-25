@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AssetView: View {
     @EnvironmentObject var appState: AppState
-    @State private var assets: Int = 0
+    @State private var ethBalance: Double = 0.0
     @State private var message: String = ""
 
     var body: some View {
@@ -12,8 +12,8 @@ struct AssetView: View {
                 .fontWeight(.bold)
                 .padding(.bottom, 20)
 
-            Button(action: fetchAssets) {
-                Text("Check Assets")
+            Button(action: fetchEthBalance) {
+                Text("Check Ethereum Balance")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)
@@ -22,10 +22,10 @@ struct AssetView: View {
             }
             .padding(.horizontal, 16)
 
-            Text("Current Assets: \(assets)")
+            Text("Ethereum Balance: \(ethBalance, specifier: "%.4f") ETH")
                 .font(.title2)
                 .padding()
-            
+
             if !message.isEmpty {
                 Text(message)
                     .foregroundColor(.red)
@@ -37,23 +37,44 @@ struct AssetView: View {
         .padding()
         .navigationTitle("Check Assets")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            fetchEthBalance()
+        }
     }
 
-    func fetchAssets() {
-        guard let url = URL(string: "\(serverURL)/assets") else { return }
+    func fetchEthBalance() {
+        guard let url = URL(string: "\(serverURL)/eth_balance") else { return }
         var request = URLRequest(url: url)
         request.setValue(appState.token, forHTTPHeaderField: "x-access-token")
 
         URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else { return }
-            if let assetsResponse = try? JSONDecoder().decode(AssetsResponse.self, from: data) {
+            if let error = error {
                 DispatchQueue.main.async {
-                    self.assets = assetsResponse.assets
-                    self.message = ""
+                    self.message = "Request error: \(error.localizedDescription)"
                 }
-            } else {
+                return
+            }
+            guard let data = data else {
                 DispatchQueue.main.async {
-                    self.message = "Failed to fetch assets."
+                    self.message = "No data received."
+                }
+                return
+            }
+            do {
+                let balanceResponse = try JSONDecoder().decode([String: Double].self, from: data)
+                if let ethBalance = balanceResponse["eth_balance"] {
+                    DispatchQueue.main.async {
+                        self.ethBalance = ethBalance
+                        self.message = ""
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.message = "Failed to fetch Ethereum balance: Key not found"
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.message = "Failed to fetch Ethereum balance: \(error.localizedDescription)"
                 }
             }
         }.resume()

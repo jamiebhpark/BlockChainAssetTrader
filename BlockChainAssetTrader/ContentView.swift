@@ -81,7 +81,7 @@ struct ContentView: View {
                     .cornerRadius(10)
                 }
                 .padding(.horizontal, 16)
-                
+
                 NavigationLink(value: NavigationDestination.transactionList) {
                     HStack {
                         Image(systemName: "list.bullet")
@@ -91,6 +91,20 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.gray)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                }
+                .padding(.horizontal, 16)
+                
+                NavigationLink(value: NavigationDestination.updateProfile) {
+                    HStack {
+                        Image(systemName: "pencil.circle")
+                        Text("Update Profile")
+                            .fontWeight(.semibold)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                 }
@@ -115,6 +129,8 @@ struct ContentView: View {
                     TransactionDetailView(transaction: transaction)
                 case .transactionList:
                     TransactionListView()
+                case .updateProfile:
+                    UpdateProfileView()
                 }
             }
         }

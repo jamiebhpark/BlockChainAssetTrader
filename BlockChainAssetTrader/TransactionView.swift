@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TransactionView: View {
     @EnvironmentObject var appState: AppState
-    @State private var receiver: String = "0xReceiverEthereumAddressHere"  // 수신자의 실제 Ethereum 주소
+    @State private var receiver: String = ""  // 수신자의 ID 또는 Ethereum 주소
     @State private var amount: String = ""
     @State private var message: String = ""
     @State private var transactions: [BlockchainTransaction] = []
@@ -15,7 +15,7 @@ struct TransactionView: View {
                 .fontWeight(.bold)
                 .padding(.bottom, 20)
             
-            TextField("Receiver", text: $receiver)
+            TextField("Receiver (ID or Ethereum Address)", text: $receiver)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
@@ -72,7 +72,7 @@ struct TransactionView: View {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(appState.token, forHTTPHeaderField: "x-access-token")
-        let body: [String: Any] = ["receiver": receiver, "amount": Double(amount) ?? 0.0]  // Double 형식으로 변환
+        let body: [String: Any] = ["receiver": receiver, "amount": Double(amount) ?? 0.0]
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
 
         URLSession.shared.dataTask(with: request) { data, response, error in

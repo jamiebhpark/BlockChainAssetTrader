@@ -1,32 +1,16 @@
 import SwiftUI
 
-struct RegisterView: View {
+struct UpdateProfileView: View {
     @EnvironmentObject var appState: AppState
-    @State private var username: String = ""
-    @State private var password: String = ""
     @State private var ethereumAddress: String = ""
     @State private var message: String = ""
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Register")
+            Text("Update Profile")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom, 20)
-            
-            TextField("Username", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(Color(.secondarySystemBackground))
-                .cornerRadius(8)
-            
-            SecureField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(Color(.secondarySystemBackground))
-                .cornerRadius(8)
             
             TextField("Ethereum Address", text: $ethereumAddress)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -35,8 +19,8 @@ struct RegisterView: View {
                 .background(Color(.secondarySystemBackground))
                 .cornerRadius(8)
             
-            Button(action: registerUser) {
-                Text("Register")
+            Button(action: updateProfile) {
+                Text("Update Profile")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)
@@ -52,16 +36,17 @@ struct RegisterView: View {
             Spacer()
         }
         .padding()
-        .navigationTitle("Register")
+        .navigationTitle("Update Profile")
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    func registerUser() {
-        guard let url = URL(string: "\(serverURL)/register") else { return }
+    func updateProfile() {
+        guard let url = URL(string: "\(serverURL)/update_profile") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let body: [String: Any] = ["username": username, "password": password, "ethereum_address": ethereumAddress]
+        request.setValue(appState.token, forHTTPHeaderField: "x-access-token")
+        let body: [String: Any] = ["ethereum_address": ethereumAddress]
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
 
         URLSession.shared.dataTask(with: request) { data, response, error in
@@ -72,7 +57,7 @@ struct RegisterView: View {
                 }
             } else {
                 DispatchQueue.main.async {
-                    self.message = "Failed to register."
+                    self.message = "Failed to update profile."
                 }
             }
         }.resume()

@@ -7,4 +7,5 @@ enum NavigationDestination: Hashable {
     case assets
     case transactionDetail(transaction: BlockchainTransaction)
     case transactionList
+    case updateProfile
 }

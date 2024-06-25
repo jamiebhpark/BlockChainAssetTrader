@@ -16,6 +16,7 @@
 		7DA2A83B2C2B09D40016A95A /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2A83A2C2B09D40016A95A /* TransactionDetailView.swift */; };
 		7DA2A8412C2B14020016A95A /* BlockChainTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2A8402C2B14020016A95A /* BlockChainTransaction.swift */; };
 		7DA2A8432C2B151E0016A95A /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2A8422C2B151E0016A95A /* NavigationDestination.swift */; };
+		7DA2A8472C2B22920016A95A /* UpdateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2A8462C2B22920016A95A /* UpdateProfileView.swift */; };
 		7DEC6D0D2C29295F0095514A /* BlockChainAssetTraderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6D0C2C29295F0095514A /* BlockChainAssetTraderApp.swift */; };
 		7DEC6D0F2C29295F0095514A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6D0E2C29295F0095514A /* ContentView.swift */; };
 		7DEC6D112C2929610095514A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEC6D102C2929610095514A /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		7DA2A83A2C2B09D40016A95A /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		7DA2A8402C2B14020016A95A /* BlockChainTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainTransaction.swift; sourceTree = "<group>"; };
 		7DA2A8422C2B151E0016A95A /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		7DA2A8462C2B22920016A95A /* UpdateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileView.swift; sourceTree = "<group>"; };
 		7DEC6D092C29295F0095514A /* BlockChainAssetTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockChainAssetTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEC6D0C2C29295F0095514A /* BlockChainAssetTraderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainAssetTraderApp.swift; sourceTree = "<group>"; };
 		7DEC6D0E2C29295F0095514A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				7DA2A83A2C2B09D40016A95A /* TransactionDetailView.swift */,
 				7DA2A8402C2B14020016A95A /* BlockChainTransaction.swift */,
 				7DA2A8422C2B151E0016A95A /* NavigationDestination.swift */,
+				7DA2A8462C2B22920016A95A /* UpdateProfileView.swift */,
 			);
 			path = BlockChainAssetTrader;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				7D2E0E932C299BFB00DDB9FF /* AppState.swift in Sources */,
 				7D2E0E8F2C29938700DDB9FF /* AssetView.swift in Sources */,
 				7DEC6D0D2C29295F0095514A /* BlockChainAssetTraderApp.swift in Sources */,
+				7DA2A8472C2B22920016A95A /* UpdateProfileView.swift in Sources */,
 				7DA2A83B2C2B09D40016A95A /* TransactionDetailView.swift in Sources */,
 				7D2E0E8B2C29937000DDB9FF /* LoginView.swift in Sources */,
 				7DEC6D212C29547E0095514A /* TransactionListView.swift in Sources */,

@@ -1,7 +1,7 @@
 import Foundation
 
 // 서버 URL
-let serverURL = "http://172.30.1.24:5001"
+let serverURL = "http://172.30.1.20:5001"
 
 // 공통 구조체 정의
 struct ResponseMessage: Codable {
